@@ -1,0 +1,6 @@
+spring:
+    application:
+        name: GestioneCorso
+    cloud:
+        config:
+            uri: http://localhost:8888
