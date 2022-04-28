@@ -35,6 +35,8 @@ public class CorsoServiceImpl implements CorsoService{
 
         /*Per ogni elemento corso di tipo Corso preso dalla List corsi.*/
         for(Corso corso : corsi){
+            //ANTONIO/ Lo convertiamo in un oggetto DTO e lo inseriamo
+            // nella lista dei corsi convertiti che poi restituiamo alla funzione
             corsi_convertiti.add(corsoMapper.toDto(corso));
         }
 
@@ -58,6 +60,11 @@ public class CorsoServiceImpl implements CorsoService{
             Non si puo' mettere direttamente
              if(checkDeleteDocente(corso.getId_docente())){
                 ??
+                
+                
+             /ANTONIO/ Probabilmente funziona lo stesso, fate una prova magari, ma sarebbe 
+             meglio specificare, essendo una funzione di classe, proprio come le variabili
+             mettiamo this per accedervi
              */
 
 
@@ -93,7 +100,11 @@ public class CorsoServiceImpl implements CorsoService{
             return "Corso salvato correttamente.";
         }
     }
-
+    
+    
+    //ANTONIO/ Controlliamo il numero di corsi che ha un singolo docente
+    //         se è minore o uguale ad un solo corso ritorniamo true
+    //         se ha associato piu di un corso ritorniamo false
     @Override
     public Boolean checkDeleteDocente(Long id_docente) {
         List<Corso> corsi = corsoRepository.findCorsoById_docente(id_docente);
