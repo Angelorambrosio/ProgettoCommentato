@@ -9,7 +9,7 @@ import springfox.documentation.spring.web.plugins.Docket;
 
 
 /*Crea in automatica la documentazione delle nostre api
-* Va dichiarato nell'application*/
+* Va dichiarato nell'application l'abilitazione della libreria Swagger2*/
 @Configuration
 public class Swagger {
     @Bean
