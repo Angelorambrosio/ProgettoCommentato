@@ -8,7 +8,7 @@ import java.time.LocalDate;
 
 /*Con @entity specifichiamo la creazione di una tabella sul db
  con il nome e gli attributi di questa classe.
- Con @Data creiamo automaticamente Getter Setter, costruttori ed altri metodi.*/
+ Con @Data creiamo automaticamente Getter Setter, non dichiariamo nessun costruttore o altri metodi, solo getter e setter.*/
 
 @Entity
 @Data
